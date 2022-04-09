@@ -3,21 +3,21 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
-  return array [0]
+  return array[0];
 }
 
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
-  return array [array.length -1]
+  return array[array.length - 1];
 }
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
-  return array.length
+  return array.length;
 }
 
 
@@ -30,6 +30,7 @@ function incrementarPorUno(array) {
   for(var i = 0; i < array.length; i++) {
     nuevoArray[i] = array[i] + 1;
   }
+
   return nuevoArray;
 }
 
@@ -49,7 +50,8 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
-  array.unshift(elemento); return array;
+  array.unshift(elemento);
+  return array;
 }
 
 
@@ -67,16 +69,12 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
-  function arrayContiene(array, elemento) {
-    // Comprueba si el elemento existe dentro de "array"
-    // Devuelve "true" si está, o "false" si no está
-    // Tu código:
-    for(var i = 0; i < array.length; i++) {
-      if(array[i] === elemento) {
-        return true;
-      }
+  for(var i = 0; i < array.length; i++) {
+    if(array[i] === elemento) {
+      return true;
     }
-    return false;
+  }
+  return false;
 }
 
 
@@ -201,7 +199,7 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
-  var nuevoArray = [ ];
+  var nuevoArray = [];
   for(let i= 0; i < array.length; i++) {
     if(array[i] > 100) {
       nuevoArray.push(array[i]);
